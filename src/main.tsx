@@ -1,7 +1,7 @@
 // Import stuff
 import { D } from "./D";
 import { createRoot } from "react-dom/client";
-import { Component } from "react";
+import { Component, FC } from "react";
 import { initializeApp } from "firebase/app";
 import {
   getFunctions,
@@ -18,7 +18,6 @@ import {
 import "./index.css";
 import "./App.css";
 
-const shoot = createRoot(document.querySelector("#shoot")!);
 const root: any = createRoot(document.querySelector("#root")!);
 
 const firebaseConfig = {
@@ -84,5 +83,18 @@ class Functions extends Component {
   }
 }
 
-root.render(<Functions />);
-shoot.render(<D />);
+interface AppI {
+  e1: JSX.Element,
+  e2: JSX.Element
+}
+
+const App: FC<AppI> = (props) => {
+  return (
+    <>
+      {props.e1} <br />
+      {props.e2}
+    </>
+  );
+}
+
+root.render(<App e1={<Functions />} e2={<D />} />);
