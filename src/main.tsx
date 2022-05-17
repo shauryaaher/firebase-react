@@ -84,8 +84,8 @@ class Functions extends Component {
 }
 
 interface AppI {
-  e1: JSX.Element,
-  e2: JSX.Element
+  e1: JSX.Element;
+  e2: JSX.Element;
 }
 
 const App: FC<AppI> = (props) => {
@@ -95,6 +95,6 @@ const App: FC<AppI> = (props) => {
       {props.e2}
     </>
   );
-}
+};
 
 root.render(<App e1={<Functions />} e2={<D />} />);
