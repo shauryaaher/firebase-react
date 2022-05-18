@@ -1,6 +1,6 @@
 // Import stuff
 import { D } from "./D";
-import { createRoot } from "react-dom/client";
+import { createRoot, Root } from "react-dom/client";
 import { Component, FC } from "react";
 import { initializeApp } from "firebase/app";
 import {
@@ -17,8 +17,8 @@ import {
 } from "firebase/auth";
 import "./index.css";
 import "./App.css";
-
-const root: any = createRoot(document.querySelector("#root")!);
+// /
+const root: Root = createRoot(document.querySelector("#root")!);
 
 const firebaseConfig = {
   apiKey: "AIzaSyDKWNZQWf6T3DDCoeKhK5PZCAquzdOQ56o",
