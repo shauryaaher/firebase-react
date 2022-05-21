@@ -83,18 +83,13 @@ class Functions extends Component {
   }
 }
 
-interface AppI {
-  e1: JSX.Element;
-  e2: JSX.Element;
-}
-
-const App: FC<AppI> = (props) => {
+function App<FC>() {
   return (
     <>
-      {props.e1} <br />
-      {props.e2}
+      <Functions /> <br />
+      <D />
     </>
   );
 };
 
-root.render(<App e1={<Functions />} e2={<D />} />);
+root.render(<App />);
